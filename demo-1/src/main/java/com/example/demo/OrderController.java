@@ -16,5 +16,4 @@ public class OrderController {
 	public void createOrder(@Valid @RequestBody OrderVO orderVO) {
 		service.saveOrder(orderVO);
 	}
-
 }
