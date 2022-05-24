@@ -14,7 +14,7 @@ public class OrderService {
 	OrderRepository repository;
 	public void saveOrder(OrderVO orderVO) {
 		repository.save(orderVO);
-		template.getForEntity("http://localhost:8080/email?address=ram@gmail.com", String.class);
+		template.getForEntity("http://localhost:8080/email?address="+orderVO.getEmail(), String.class);
 		
 		System.out.println(orderVO.getItem());
 		System.out.println(orderVO.getQuantity());

@@ -13,9 +13,18 @@ public class OrderVO {
 	Integer id;
 	@NotBlank
 	String item;
+	String email;
 	@Min(value = 1)
 	float price;
 	int quantity;
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	public int getQuantity() {
 		return quantity;
 	}
