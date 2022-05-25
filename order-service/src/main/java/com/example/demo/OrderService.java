@@ -8,16 +8,17 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class OrderService {
-	
-	RestTemplate template =new RestTemplate();
+	@Autowired
+	RestTemplate template ;
 	@Autowired
 	OrderRepository repository;
-	public void saveOrder(OrderVO orderVO) {
+	public Integer saveOrder(OrderVO orderVO) {
 		repository.save(orderVO);
 		template.getForEntity("http://localhost:8080/email?address="+orderVO.getEmail(), String.class);
 		
 		System.out.println(orderVO.getItem());
 		System.out.println(orderVO.getQuantity());
+		return orderVO.getId();
 	}
 	public List<OrderVO> getOrders() {
 		return repository.findAll();

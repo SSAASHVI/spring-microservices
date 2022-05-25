@@ -18,8 +18,8 @@ public class OrderController {
 	OrderService service;
 	
 	@PostMapping("/order")
-	public void createOrder(@Valid @RequestBody OrderVO orderVO) {
-		service.saveOrder(orderVO);
+	public Integer createOrder(@Valid @RequestBody OrderVO orderVO) {
+		return service.saveOrder(orderVO);
 	}
 	@GetMapping("/order")
 	List<OrderVO> getOrders() {
