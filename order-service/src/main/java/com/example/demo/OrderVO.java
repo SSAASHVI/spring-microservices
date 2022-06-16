@@ -56,4 +56,8 @@ public class OrderVO {
 	public void setPrice(float price) {
 		this.price = price;
 	}
+	
+	public String toString() {
+		return this.id+""; 
+	}
 }

@@ -19,10 +19,12 @@ public class OrderController {
 	
 	@PostMapping("/order")
 	public Integer createOrder(@Valid @RequestBody OrderVO orderVO) {
+		System.out.println("ADD ORDERS"+ orderVO);
 		return service.saveOrder(orderVO);
 	}
 	@GetMapping("/order")
-	List<OrderVO> getOrders() {
+	public List<OrderVO> getOrders() {
+		System.out.println("GET ORDERS");
 		return  	service.getOrders();
 	}
 }
