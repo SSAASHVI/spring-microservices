@@ -12,12 +12,14 @@ public class Customer {
 	Integer pin;
 	Long telephone;
 	String email ;
-	Date DOB;
-	public Date getDOB() {
-		return DOB;
+	String birth;
+	
+	
+	public String getBirth() {
+		return birth;
 	}
-	public void setDOB(Date dOB) {
-		DOB = dOB;
+	public void setBirth(String birth) {
+		this.birth = birth;
 	}
 	public Integer getId() {
 		return id;

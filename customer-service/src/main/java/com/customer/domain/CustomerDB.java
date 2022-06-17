@@ -2,6 +2,7 @@ package com.customer.domain;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,15 +15,23 @@ public class CustomerDB {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	Integer id;
-	
+	@Column(length = 25, nullable =false)
 	String name ;
+	@Column(length = 6, nullable =false)
 	String gender;
+	@Column(length = 50, nullable =false)
 	String address;	
+	@Column(length = 25, nullable =false)
 	String city;
+	@Column(length = 7, nullable =false)
 	Integer pin;
+	@Column(length = 15, nullable =false)
 	Long telephone;
+	@Column(length = 50, nullable =false)
 	String email ;
+	@Column(length = 10, nullable =false)
 	Date DOB;
+	
 	Date createdon;
 	public Date getCreatedon() {
 		return createdon;
@@ -30,6 +39,7 @@ public class CustomerDB {
 	public void setCreatedon(Date createdon) {
 		this.createdon = createdon;
 	}
+	
 	public Date getDOB() {
 		return DOB;
 	}
