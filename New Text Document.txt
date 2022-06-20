@@ -1,0 +1,5 @@
+https://github.com/ibmpariwesh/citi-23-may-batch2
+
+
+db password: orcl
+sample repo: https://github.com/ibmpariwesh/citi-morning-23-may-batch
